@@ -6,8 +6,8 @@
   "scripts": {
     "start": "electron .",
     "dev": "electron . --dev",
-    "build": "electron-builder --win --x64",
-    "build:all": "electron-builder --win --x64 --ia32"
+    "build": "set CSC_IDENTITY_AUTO_DISCOVERY=false && electron-builder --win portable --x64",
+    "build:all": "set CSC_IDENTITY_AUTO_DISCOVERY=false && electron-builder --win --x64 --ia32"
   },
   "keywords": [
     "hardware",
@@ -23,32 +23,16 @@
   },
   "build": {
     "appId": "com.keepline.pc-hardware-monitor",
-    "productName": "PC硬件监控工具",
+    "productName": "PC-Hardware-Monitor",
     "directories": {
       "output": "dist"
     },
     "win": {
-      "target": [
-        {
-          "target": "nsis",
-          "arch": [
-            "x64"
-          ]
-        },
-        {
-          "target": "portable",
-          "arch": [
-            "x64"
-          ]
-        }
-      ]
+      "target": "portable",
+      "signingHashAlgorithms": []
     },
-    "nsis": {
-      "oneClick": false,
-      "allowToChangeInstallationDirectory": true,
-      "createDesktopShortcut": true,
-      "createStartMenuShortcut": true,
-      "shortcutName": "PC硬件监控工具"
+    "portable": {
+      "artifactName": "${productName}-${version}-portable.${ext}"
     },
     "files": [
       "**/*",

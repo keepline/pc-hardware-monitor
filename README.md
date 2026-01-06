@@ -76,43 +76,34 @@ npm start
 
 ## 🚀 快速开始
 
-### 方法1：使用桌面快捷方式（推荐）
+### 方式一：从源码运行（开发者）
 
-1. **首次安装依赖**（只需一次）：
 ```bash
-powershell -ExecutionPolicy Bypass -Command "npm install"
+# 1. 克隆仓库
+git clone https://github.com/keepline/pc-hardware-monitor.git
+cd pc-hardware-monitor
+
+# 2. 安装依赖
+npm install
+
+# 3. 运行应用
+npm start
+
+# 或使用开发模式（带调试工具）
+npm run dev
 ```
 
-2. **创建桌面快捷方式**：
+### 方式二：使用批处理文件
+
+双击 `start-monitor.bat` 文件即可启动
+
+### 方式三：创建桌面快捷方式
+
 ```bash
 powershell -ExecutionPolicy Bypass -File ".\create-shortcut.ps1"
 ```
 
-3. **双击桌面的"硬件监控工具"图标启动应用**
-
-### 方法2：命令行启动
-
-#### 安装依赖
-
-```bash
-powershell -ExecutionPolicy Bypass -Command "npm install"
-```
-
-#### 运行应用
-
-```bash
-powershell -ExecutionPolicy Bypass -Command "npm start"
-```
-
-#### 开发模式（带DevTools）
-
-```bash
-powershell -ExecutionPolicy Bypass -Command "npm run dev"
-```
-
-#### 或使用批处理文件
-
-双击 `start-monitor.bat` 文件即可启动
+然后双击桌面的"硬件监控工具"图标
 
 ## 📦 技术栈
 
