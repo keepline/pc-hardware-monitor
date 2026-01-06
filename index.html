@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>硬件监控 - Hardware Monitor</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- 头部 -->
+    <header class="header">
+      <div class="logo">
+        <div class="logo-icon">⚡</div>
+        <h1>PC硬件监控中心</h1>
+      </div>
+      <div class="refresh-btn" id="refreshBtn">
+        <span class="refresh-icon">↻</span>
+        <span>刷新数据</span>
+      </div>
+    </header>
+
+    <!-- 导航标签栏 -->
+    <nav class="nav-tabs">
+      <button class="nav-tab active" data-target="systemCard">
+        <span class="nav-icon">💻</span>
+        <span class="nav-label">系统信息</span>
+      </button>
+      <button class="nav-tab" data-target="cpuCard">
+        <span class="nav-icon">🔥</span>
+        <span class="nav-label">处理器</span>
+      </button>
+      <button class="nav-tab" data-target="memoryCard">
+        <span class="nav-icon">🧠</span>
+        <span class="nav-label">内存</span>
+      </button>
+      <button class="nav-tab" data-target="gpuCard">
+        <span class="nav-icon">🎮</span>
+        <span class="nav-label">显卡</span>
+      </button>
+      <button class="nav-tab" data-target="diskCard">
+        <span class="nav-icon">💾</span>
+        <span class="nav-label">存储</span>
+      </button>
+      <button class="nav-tab" data-target="networkCard">
+        <span class="nav-icon">🌐</span>
+        <span class="nav-label">网络</span>
+      </button>
+      <button class="nav-tab" data-target="batteryCard">
+        <span class="nav-icon">🔋</span>
+        <span class="nav-label">电池</span>
+      </button>
+    </nav>
+
+    <!-- 主要内容区 -->
+    <main class="main-content">
+      <!-- 系统信息卡片 -->
+      <section class="card" id="systemCard">
+        <div class="card-header">
+          <h2>💻 系统信息</h2>
+        </div>
+        <div class="card-body" id="systemInfo">
+          <div class="loading">加载中...</div>
+        </div>
+      </section>
+
+      <!-- CPU信息卡片 -->
+      <section class="card" id="cpuCard">
+        <div class="card-header">
+          <h2>🔥 处理器 (CPU)</h2>
+        </div>
+        <div class="card-body" id="cpuInfo">
+          <div class="loading">加载中...</div>
+        </div>
+      </section>
+
+      <!-- 内存信息卡片 -->
+      <section class="card" id="memoryCard">
+        <div class="card-header">
+          <h2>🧠 内存 (RAM)</h2>
+        </div>
+        <div class="card-body" id="memoryInfo">
+          <div class="loading">加载中...</div>
+        </div>
+      </section>
+
+      <!-- GPU信息卡片 -->
+      <section class="card" id="gpuCard">
+        <div class="card-header">
+          <h2>🎮 显卡 (GPU)</h2>
+        </div>
+        <div class="card-body" id="gpuInfo">
+          <div class="loading">加载中...</div>
+        </div>
+      </section>
+
+      <!-- 磁盘信息卡片 -->
+      <section class="card" id="diskCard">
+        <div class="card-header">
+          <h2>💾 存储设备</h2>
+        </div>
+        <div class="card-body" id="diskInfo">
+          <div class="loading">加载中...</div>
+        </div>
+      </section>
+
+      <!-- 网络信息卡片 -->
+      <section class="card" id="networkCard">
+        <div class="card-header">
+          <h2>🌐 网络</h2>
+        </div>
+        <div class="card-body" id="networkInfo">
+          <div class="loading">加载中...</div>
+        </div>
+      </section>
+
+      <!-- 电池信息卡片 -->
+      <section class="card" id="batteryCard">
+        <div class="card-header">
+          <h2>🔋 电池</h2>
+        </div>
+        <div class="card-body" id="batteryInfo">
+          <div class="loading">加载中...</div>
+        </div>
+      </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+      <p>最后更新: <span id="lastUpdate">--</span></p>
+    </footer>
+  </div>
+
+  <script src="renderer.js"></script>
+</body>
+</html>
+
